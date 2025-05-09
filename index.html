@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flying to the Moon - Servidor de Rust</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #00d1ff;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    h1, h2 {
+      color: #00d1ff;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #00d1ff;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    section {
+      margin-bottom: 50px;
+    }
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+    }
+    .iframe-container iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flying to the Moon</h1>
+    <p>Servidor Rust especializado en Minicópteros</p>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#caracteristicas">Características</a>
+      <a href="#guia">Guía</a>
+      <a href="#tienda">Tienda</a>
+      <a href="#discord">Discord</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <section id="inicio">
+      <h2>Conéctate al servidor</h2>
+      <p>Haz clic en el botón para copiar la IP del servidor:</p>
+      <button class="button" onclick="copiarIP()">Copiar IP:PORT</button>
+      <p id="mensaje"></p>
+    </section>
+
+    <section id="caracteristicas">
+      <h2>Características del servidor</h2>
+      <ul>
+        <li>Minicópteros indestructibles mientras se conducen</li>
+        <li>Cooldown de 1 minuto para usar /mini</li>
+        <li>Sistema de puntos por tiempo online</li>
+        <li>Tienda personalizable con GUI</li>
+        <li>Eventos automáticos de la Excavadora con defensa</li>
+        <li>Clanes sincronizados con equipos y permisos</li>
+      </ul>
+    </section>
+
+    <section id="guia">
+      <h2>Comandos útiles</h2>
+      <ul>
+        <li><strong>/mini</strong> - Saca tu minicóptero personal</li>
+        <li><strong>/hover</strong> - Mantén el mini flotando</li>
+        <li><strong>/kit</strong> - Reclama tus kits de inicio</li>
+        <li><strong>/rewards</strong> - Canjea tus puntos</li>
+      </ul>
+    </section>
+
+    <section id="tienda">
+      <h2>Tienda y Recompensas</h2>
+      <p>Gana puntos jugando y canjéalos por objetos exclusivos:</p>
+      <ul>
+        <li>Skins únicas</li>
+        <li>Minicópteros mejorados</li>
+        <li>Explosivos y armas</li>
+      </ul>
+    </section>
+
+    <section id="discord">
+      <h2>Únete a nuestro Discord</h2>
+      <p>Conéctate con la comunidad, repórtanos errores o sugiere mejoras.</p>
+      <a class="button" href="https://discord.gg/TU-LINK" target="_blank">Entrar al Discord</a>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Flying to the Moon - Rust Server</p>
+  </footer>
+
+  <script>
+    function copiarIP() {
+      const ip = 'IP_DEL_SERVIDOR:PUERTO';
+      navigator.clipboard.writeText(ip).then(() => {
+        document.getElementById('mensaje').textContent = 'IP copiada al portapapeles';
+      });
+    }
+  </script>
+</body>
+</html>
