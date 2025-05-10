@@ -111,7 +111,7 @@
       <a href="#guia">Guía / Guide</a>
       <a href="#tienda">Tienda / Store</a>
       <a href="#discord">Discord</a>
-    </nav><a class='button' href='en.html' style='position:absolute; top:20px; right:20px;'>English</a>
+    </nav><a class='button' href='index.html' style='position:absolute; top:20px; right:20px;'>English</a>
 <div id="countdown" style="margin-top: 10px; font-size: 18px; color: #f0f0f0;"></div>
 <script>
   const targetDate = new Date("2025-06-05T20:00:00+02:00").getTime();
@@ -139,11 +139,14 @@
 
   <div class="wrapper"><div class="column">
       
-      <section>
+      <section style='text-align:center;'>
         <h3>Conéctate al servidor</h3>
         <p>Haz clic en el botón para copiar la IP del servidor:</p>
-        <button class="button" onclick="copiarIP()">203.16.163.102:28015</button>
+        
+        <button class="button" onclick="copiarIP()">Copiar IP</button>
+        <a class="button" href="steam://connect/203.16.163.102:28015" style="margin-left:10px;">Conectar por Steam</a>
         <p id="mensaje"></p>
+
       </section>
       <section>
         <h3>Características del servidor</h3>
@@ -191,8 +194,11 @@
       <section>
         <h3>Connect to the Server</h3>
         <p>Click the button to copy the server IP:</p>
-        <button class="button" onclick="copiarIP()">203.16.163.102:28015</button>
+        
+        <button class="button" onclick="copiarIP()">Copiar IP</button>
+        <a class="button" href="steam://connect/203.16.163.102:28015" style="margin-left:10px;">Conectar por Steam</a>
         <p id="mensaje"></p>
+
       </section>
       <section>
         <h3>Server Features</h3>
