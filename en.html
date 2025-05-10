@@ -91,7 +91,7 @@
       <a href="#guia">Guía / Guide</a>
       <a href="#tienda">Tienda / Store</a>
       <a href="#discord">Discord</a>
-    </nav><a class='button' href='en.html' style='position:absolute; top:20px; right:20px;'>English</a>
+    </nav><a class='button' href='index.html' style='position:absolute; top:20px; right:20px;'>Español</a>
 <div id="countdown" style="margin-top: 10px; font-size: 18px; color: #f0f0f0;"></div>
 <script>
   const targetDate = new Date("2025-06-05T20:00:00+02:00").getTime();
@@ -101,14 +101,14 @@
     const now = new Date().getTime();
     const diff = targetDate - now;
     if (diff <= 0) {
-      countdown.innerHTML = "¡Ya ocurrió el Force Wipe!";
+      countdown.innerHTML = "Force Wipe has already occurred!";
       return;
     }
     const d = Math.floor(diff / (1000 * 60 * 60 * 24));
     const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const s = Math.floor((diff % (1000 * 60)) / 1000);
-    countdown.innerHTML = `⏳ Próximo Force Wipe en: ${d}d ${h}h ${m}m ${s}s`;
+    countdown.innerHTML = `⏳ Next Force Wipe in: ${d}d ${h}h ${m}m ${s}s`;
   }
 
   updateCountdown();
@@ -118,51 +118,51 @@
   </header>
 
   <div class="wrapper"><div class="column">
-      <h2>Español</h2>
+      <h2>English</h2>
       <section>
-        <h3>Conéctate al servidor</h3>
-        <p>Haz clic en el botón para copiar la IP del servidor:</p>
+        <h3>Connect to the Server</h3>
+        <p>Click the button to copy the server IP:</p>
         <button class="button" onclick="copiarIP()">203.16.163.102:28015</button>
         <p id="mensaje"></p>
       </section>
       <section>
-        <h3>Características del servidor</h3>
+        <h3>Server Features</h3>
         <ul>
-          <li>Minicópteros y otros vehículos con fuel ilimitado</li>
-          <li>Minicópteros sin cooldown para spawnear</li>
-          <li>Sistema de puntos por tiempo online</li>
-          <li>Kits y Tienda para comprar todo lo que necesites</li>
-          <li>Eventos automáticos de la Excavadora con defensa</li>
+          <li>Minicopters and other vehicles with unlimited fuel</li>
+          <li>Minicopters can be spawned with no cooldown</li>
+          <li>Points system for online time</li>
+          <li>Kits and store to get anything you need</li>
+          <li>Automated Excavator events with defenses</li>
         </ul>
       </section>
       <section>
-        <h3>Comandos útiles</h3>
+        <h3>Useful Commands</h3>
         <ul>
-          <li><strong>/vehicle</strong> - Menú de vehículos</li>
-          <li><strong>/mini</strong> - Saca tu minicóptero personal</li>
-          <li><strong>/nomini</strong> - Elimina tu minicóptero</li>
-          <li><strong>/hover</strong> - Mantén el mini flotando</li>
-          <li><strong>/takeoff</strong> - Despega rápido</li>
-          <li><strong>/menu</strong> - Menú del servidor</li>
-          <li><strong>/kit</strong> - Reclama tus kits</li>
-          <li><strong>/s</strong> - Tienda exclusiva</li>
+          <li><strong>/vehicle</strong> - Vehicle menu</li>
+          <li><strong>/mini</strong> - Spawn your personal minicopter</li>
+          <li><strong>/nomini</strong> - Delete your minicopter</li>
+          <li><strong>/hover</strong> - Keep the mini hovering</li>
+          <li><strong>/takeoff</strong> - Quick takeoff</li>
+          <li><strong>/menu</strong> - Server menu</li>
+          <li><strong>/kit</strong> - Claim your kits</li>
+          <li><strong>/s</strong> - Exclusive store</li>
         </ul>
       </section>
       <section>
-        <h3>Tienda y Recompensas</h3>
-        <p>Gana puntos jugando y canjéalos por objetos exclusivos:</p>
+        <h3>Store and Rewards</h3>
+        <p>Earn points while playing and redeem them for exclusive items:</p>
         <ul>
-          <li>Componentes y Medicinas</li>
-          <li>Recursos</li>
-          <li>Armas</li>
+          <li>Components and Meds</li>
+          <li>Resources</li>
+          <li>Weapons</li>
           <li>Kits</li>
           <li>Vip</li>
         </ul>
       </section>
       <section>
-        <h3>Únete a nuestro Discord</h3>
-        <p>Conéctate con la comunidad, repórtanos errores o sugiere mejoras.</p>
-        <a class="button" href="https://discord.gg/TU-LINK" target="_blank">Entrar al Discord</a>
+        <h3>Join our Discord</h3>
+        <p>Connect with the community, report bugs or suggest improvements.</p>
+        <a class="button" href="https://discord.gg/TU-LINK" target="_blank">Join Discord</a>
       </section>
     </div></div>
 
