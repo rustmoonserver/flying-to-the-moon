@@ -15,7 +15,6 @@
       color: #f0f0f0;
       line-height: 1.6;
       min-height: 100vh;
-      position: relative;
     }
     body::before {
       content: '';
@@ -36,30 +35,20 @@
       text-decoration: none;
     }
     .wrapper {
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 140px);
-  min-height: calc(100vh - 140px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: center;
+      width: 100%;
       display: flex;
-      flex-direction: row;
-      max-width: 1400px;
-      margin: 30px auto;
-      padding: 0 20px;
-      gap: 20px;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px;
     }
     .column {
-  max-width: 600px;
-  margin: 0 auto;
-      flex: 1;
+      flex: 1 1 30%;
       background-color: rgba(0, 0, 0, 0.6);
       padding: 20px;
       border-radius: 10px;
       min-width: 300px;
+      max-width: 1000px;
     }
     h1, h2, h3 {
       color: #00d1ff;
@@ -79,47 +68,21 @@
     ul {
       list-style-type: square;
       margin-left: 20px;
+      text-align: left;
     }
-    @media (max-width: 768px) {
-      .wrapper {
-  justify-content: center;
-  align-items: center;
-  min-height: calc(100vh - 140px);
-  min-height: calc(100vh - 140px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  justify-content: center;
-        flex-direction: column;
-        padding: 10px;
-      }
-      .column {
-  max-width: 600px;
-  margin: 0 auto;
-        margin-bottom: 20px;
-      }
+    #novedades .badge-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      gap: 20px;
     }
-  
-    @media (max-width: 768px) {
-      .wrapper {
-        flex-direction: column;
-        padding: 10px;
-      }
-      .column {
-        margin-bottom: 20px;
-        width: 100%;
-      }
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      nav a {
-        margin: 5px 10px;
-        font-size: 16px;
-      }
+    #novedades .badge-container img {
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
     }
-
   </style>
 </head>
 <body>
@@ -127,60 +90,48 @@
     <h1>Flying to the Moon</h1>
     <p>Servidor Rust especializado en Minicópteros / Rust server focused on minicopters</p>
     <nav>
-  <a href="#home">Inicio</a>
-  <a href="#features">Características</a>
-  <a href="#commands">Comandos</a>
-  <a href="#store">Tienda</a>
-  <a href="#discord">Discord</a>
-  <a href="#map">Mapa</a>
-</nav><a class='button' href='index.html' style='position:absolute; top:20px; right:20px;'>English</a>
-<div id="countdown" style="margin-top: 10px; font-size: 18px; color: #f0f0f0;"></div>
-<script>
-  const targetDate = new Date("2025-06-05T20:00:00+02:00").getTime();
-  const countdown = document.getElementById("countdown");
-
-  function updateCountdown() {
-    const now = new Date().getTime();
-    const diff = targetDate - now;
-    if (diff <= 0) {
-      countdown.innerHTML = "¡Ya ocurrió el Force Wipe!";
-      return;
-    }
-    const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const s = Math.floor((diff % (1000 * 60)) / 1000);
-    countdown.innerHTML = `⏳ Próximo Force Wipe en: ${d}d ${h}h ${m}m ${s}s`;
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
-
+      <a href="#home">Inicio</a>
+      <a href="#features">Características</a>
+      <a href="#commands">Comandos</a>
+      <a href="#store">Tienda</a>
+      <a href="#discord">Discord</a>
+      <a href="#map">Mapa</a>
+    </nav>
+    <a class='button' href='index.html' style='position:absolute; top:20px; right:20px;'>English</a>
+    <div id="countdown" style="margin-top: 10px; font-size: 18px; color: #f0f0f0;"></div>
   </header>
 
-  <div class="wrapper"><div class="column">
-      
-      <section style='text-align:center;'>
-        <h3>Conéctate al servidor</h3>
+  <div class="wrapper">
+    <div class="column">
+      <section style="text-align:center;">
+        <h3 id="home">Conéctate al servidor</h3>
         <p>Haz clic en el botón para copiar la IP del servidor:</p>
-        
         <button class="button" onclick="copiarIP()">Copiar IP</button>
         <a class="button" href="steam://connect/203.16.163.102:28015" style="margin-left:10px;">Conectar por Steam</a>
         <p id="mensaje"></p>
       </section>
-    <section id="novedades" style="text-align:center; margin-top:50px;"><h3>Novedades - Recompensas Raidable Bases</h3><div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:20px;"><img alt="Easy Base - 5000 RP" src="easy.png" style="max-width:240px; height:auto; border-radius:10px;"/><img alt="Medium Base - 20000 RP" src="medium.png" style="max-width:240px; height:auto; border-radius:10px;"/><img alt="Expert Base - 50000 RP" src="expert.png" style="max-width:240px; height:auto; border-radius:10px;"/></div></section>     
-    <section>
-      <h3>Reglas del servidor</h3>
-      <ul>
-        <li>❌ No se permite el uso de cheats o exploits</li>
-        <li>🤝 Respeta a otros jugadores</li>
-        <li>🏠 Escuhamos nuevas ideas de mejora.</li>
-        <li>🛠 Reporta abusos o gliches</li>
-  </ul>
-</section>
+
+      <section id="novedades" style="text-align:center; margin-top:50px;">
+        <h3>Novedades - Recompensas Raidable Bases</h3>
+        <div class="badge-container">
+          <img src="easy.png" alt="Easy Base - 5000 RP">
+          <img src="medium.png" alt="Medium Base - 20000 RP">
+          <img src="expert.png" alt="Expert Base - 50000 RP">
+        </div>
+      </section>
+
       <section>
-        <h3>Características del servidor</h3>
+        <h3>Reglas del servidor</h3>
+        <ul>
+          <li>❌ No se permite el uso de cheats o exploits</li>
+          <li>🤝 Respeta a otros jugadores</li>
+          <li>🏠 Escuchamos nuevas ideas de mejora.</li>
+          <li>🛠 Reporta abusos o glitches</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 id="features">Características del servidor</h3>
         <ul>
           <li>Wipe Mensual</li>
           <li>X5</li>
@@ -192,8 +143,9 @@
           <li>Eventos automáticos de la Excavadora con defensa</li>
         </ul>
       </section>
+
       <section>
-        <h3>Comandos útiles</h3>
+        <h3 id="commands">Comandos útiles</h3>
         <ul>
           <li><strong>/vehicle</strong> - Menú de vehículos</li>
           <li><strong>/mini</strong> - Saca tu minicóptero personal</li>
@@ -205,15 +157,17 @@
           <li><strong>/menu</strong> - Menú del servidor</li>
           <li><strong>/kit</strong> - Reclama tus kits</li>
           <li><strong>/s</strong> - Tienda exclusiva</li>
-          <li><strong>/ad</strong> - Cierre automatico de puertas</li>
+          <li><strong>/ad</strong> - Cierre automático de puertas</li>
           <li><strong>/upall</strong> - Mejora estructuras</li>
           <li><strong>/remove</strong> - Eliminar estructuras</li>
-          <li><strong>/clan</strong> - Administra tu clan</li> 
-          <li><strong>/tpr</strong> - Teletrasporte</li>   
-          <li><strong>/home add 1</strong> - Añade tu casa al teletransporte</li>        </ul>
+          <li><strong>/clan</strong> - Administra tu clan</li>
+          <li><strong>/tpr</strong> - Teletransporte</li>
+          <li><strong>/home add 1</strong> - Añade tu casa al teletransporte</li>
+        </ul>
       </section>
+
       <section>
-        <h3>Tienda y Recompensas</h3>
+        <h3 id="store">Tienda y Recompensas</h3>
         <p>Gana puntos jugando y canjéalos por objetos exclusivos:</p>
         <ul>
           <li>Componentes y Medicinas</li>
@@ -223,21 +177,21 @@
           <li>Vip</li>
         </ul>
       </section>
+
       <section>
-        <h3>Únete a nuestro Discord</h3>
+        <h3 id="discord">Únete a nuestro Discord</h3>
         <p>Conéctate con la comunidad, repórtanos errores o sugiere mejoras.</p>
         <a class="button" href="https://discord.gg/TU-LINK" target="_blank">Entrar al Discord</a>
       </section>
-    
-<section id="map" style="text-align:center; margin-top: 50px;">
-  <h3>Mapa del servidor</h3>
-  <p>Consulta el mapa del wipe actual a continuación.</p>
-  <div style="max-width: 900px; margin: 0 auto;">
-    <img src="mapa.png" alt="Mapa Rust" style="width: 100%; border-radius: 10px; margin-top: 15px;">
-  </div>
-</section>
 
-</div></div>
+      <section id="map" style="text-align:center; margin-top: 50px;">
+        <h3>Mapa del servidor</h3>
+        <p>Consulta el mapa del wipe actual a continuación.</p>
+        <div style="max-width: 900px; margin: 0 auto;">
+          <img src="mapa.png" alt="Mapa Rust" style="width: 100%; border-radius: 10px; margin-top: 15px;">
+        </div>
+      </section>
+    </div>
   </div>
 
   <footer>
@@ -248,9 +202,29 @@
     function copiarIP() {
       const ip = '203.16.163.102:28015';
       navigator.clipboard.writeText(ip).then(() => {
-        document.getElementById('mensaje').textContent = 'IP copied to clipboard';
+        document.getElementById('mensaje').textContent = 'IP copiada al portapapeles';
       });
     }
+
+    const targetDate = new Date("2025-06-05T20:00:00+02:00").getTime();
+    const countdown = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+      if (diff <= 0) {
+        countdown.innerHTML = "¡Ya ocurrió el Force Wipe!";
+        return;
+      }
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+      countdown.innerHTML = `⏳ Próximo Force Wipe en: ${d}d ${h}h ${m}m ${s}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
   </script>
 </body>
 </html>
